@@ -50,7 +50,7 @@ export default function Home() {
      
       <Header />
       <Main />
-      <Gallery />
+      
       <Skills />
       
       <Contact />

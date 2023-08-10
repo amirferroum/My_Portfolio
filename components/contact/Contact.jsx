@@ -16,7 +16,7 @@ const Contact = () => {
 
 
 
-  return (<div className='relative w-full px-16 lg:px-38 xl:px-48 py-36'>
+  return (<div className='relative w-full px-4 sm:px-16 lg:px-38 xl:px-48 py-36'>
 <Title_sections title ="Contact" color="white"/>
 
 

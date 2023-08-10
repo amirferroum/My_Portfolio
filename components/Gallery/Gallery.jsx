@@ -48,7 +48,7 @@ const [modal, setmodal] = useState({active: false,index: 0});
   return <div className="relative w-full px-16 lg:px-48 py-36">
     <Title_sections title ="Projects" color ='white' />
     <span className="p-8 text-sm text-gray-500">Some Work</span>
-    <div >
+    <div className="" >
     {projects.map((project,index)=> {
         return <Project key={`/modal_${index}`}  color={project.color} index={index} src ={project.src} title={project.title} sidetext= {project.sidetext}  setModal={setmodal}/>
     })} 

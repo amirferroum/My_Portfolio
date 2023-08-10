@@ -71,7 +71,7 @@ const Skills = () => {
     }
   
   return (
-    <div   className='relative w-full bg-[#292929] text-white h-auto xl:h-screen px-48 py-36 '>
+    <div   className='relative w-full bg-[#292929] text-white h-auto xl:h-screen px-16 sm:px-48 py-36 '>
      <Title_sections title ="Skills" color="#292929"/>
 
     <div className='w-full flex flex-col gap-10 justify-center items-center   xl:grid grid-cols-2 '>
@@ -84,7 +84,7 @@ const Skills = () => {
   <h2 className='px-2 text-lg font-semibold '>{item.title}</h2>
   <h3 className='font-semibold text-sm'>{item.pers + "%"}</h3>
   </div>
-  <div className=' w-[400px] lg:w-[500px] bg-[#505050]  h-3  rounded-md relative'>
+  <div className=' min-w-[300px] lg:w-[500px] bg-[#505050]  h-3  rounded-md relative'>
   <motion.div
   
   viewport={{ once: true }}
@@ -108,7 +108,7 @@ const Skills = () => {
   <h2 className='px-2 text-lg font-semibold '>{item.title}</h2>
   <h3 className='font-semibold text-sm'>{item.pers + "%"}</h3>
   </div>
-  <div className=' w-[400px] lg:w-[500px] bg-[#505050]  h-3  rounded-md relative'>
+  <div className=' min-w-[300px] lg:w-[500px] bg-[#505050]  h-3  rounded-md relative'>
   <motion.div
   
   viewport={{ once: true }}

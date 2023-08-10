@@ -24,13 +24,13 @@ const Project = ({ kes, index, title, setModal,sidetext,src,color }) => {
         </p>
       </div>
 
-      <div className=" sm:hidden flex flex-col gap-4  border-t py-4 min-w-[400px]">
+      <div className=" sm:hidden flex flex-col gap-4  border-t py-4 min-w-fit">
       
         <div style={{backgroundColor: color}} className="border-b p-4 flex justify-center items-center ">
         <Image
                 className="h-auto w-full min-w-[400px]"
                 src={`/assets/${src}`}
-                width={600}
+                width={200}
                 height={0}
                 alt="image"
               />
