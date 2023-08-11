@@ -3,8 +3,8 @@
 import React from 'react'
 import Title_sections from '../Title_sections'
 import { delay, motion } from "framer-motion";
-
-
+import {BsFacebook,BsInstagram,BsGithub} from "react-icons/bs"
+import Link from 'next/link';
 
 
 const Contact = () => {
@@ -27,7 +27,7 @@ const Contact = () => {
         whileInView={{opacity: [0,1],x: [400,0]}}
         transition= { {duration: 1, ease: [0.32, 0, 0.67, 0],delay:0.2} }
         >
-            <form action="" className='flex flex-col gap-8 justify-center items-center p-8 ' >
+            <form action="" className='hidden lg:flex flex-col gap-8 justify-center items-center p-8 ' >
                 <div className='w-full flex justify-between items-center'>
                 <label className='text-lg font-bold' > Full Name : </label>
                 <input type="text" className='bg-[#f0f0f3] outline-none rounded-full w-[50%]  font-semibold p-4' placeholder='Name'/>
@@ -62,23 +62,45 @@ const Contact = () => {
          whileInView={{opacity: [0,1],x: [-400,0]}}
          viewport={{once:'true'}}
          transition= { {duration: 1, ease: [0.32, 0, 0.67, 0],delay:0.2} }
-        className='group z-0  overflow-hidden relative w-full h-full min-h-[400px]  text-white bg-[#292929] p-8 rounded-lg flex flex-col justify-center gap-y-14  items-center'>
-         <h1 className='z-10 text-4xl font-semibold mb-12'>Get In Touch </h1>
+        className='overflow-hidden relative w-full h-[700px] lg:h-full lg:min-h-[400px]  text-white bg-[#292929] p-8 rounded-lg flex flex-col justify-center gap-y-14  items-center'>
+         <h1 className='text-4xl font-semibold mb-12'>Let’s work together </h1>
          
-         <div className='z-10 flex gap-10 sm:gap-16 font-semibold'>
-         <h2>Insta</h2>
-         <h2>Insta</h2>
-         <h2>Insta</h2>
-         <h2>Insta</h2>
+         <div className=' flex gap-10 sm:gap-16 font-semibold'>
+         <Link href="https://m.facebook.com/kitil.seller.of.zatlah"><BsFacebook size={40}/></Link>
+         <Link href='https://www.instagram.com/ferroumamir/'><BsInstagram size={40}/></Link>
+         <Link href='https://github.com/amirferroum'><BsGithub size={40}/></Link>
+         
          </div>
-         <h1 className='z-10 text-2xl font-semibold'>Phone Number :</h1>
-         <p className='z-10 text-xl font-semibold'>+213699826733</p>
-         <div
+        <div className='flex flex-col items-center justify-between gap-16 text-2xl font-semibold '>
+        <div className='group relative overflow-hidden z-10 px-5 py-4 bg-[#505050] rounded-full font-semibold '>
+          <Link className='z-10' href="">amirferroum@gmail.com</Link>
+          <div
 
 
-className="absolute w-full h-full top-[100%]     left-[-100%] rounded-md group-hover:top-0   group-hover:left-0  duration-500 ease-in-out bg-[#455CE9] -z-10">
+className="absolute w-full h-full top-[100%]  left-[-100%] rounded-full group-hover:top-0   group-hover:left-0  duration-500 ease-in-out bg-[#455CE9] -z-10">
 
 </div>
+         </div>
+        <div className='group relative overflow-hidden z-10 px-5 py-4 bg-[#505050] rounded-full font-semibold '>
+          <Link className='z-10' href="">+213 699826733</Link>
+          <div
+
+
+className="absolute w-full h-full top-[100%]  left-[-100%] rounded-full group-hover:top-0   group-hover:left-0  duration-500 ease-in-out bg-[#455CE9] -z-10">
+
+</div>
+         </div>
+        </div>
+         <div className='group relative overflow-hidden z-10 px-5 py-4 bg-[#505050] rounded-full font-semibold '>
+          <Link className='z-10' href="">Get In Touch</Link>
+          <div
+
+
+className="absolute w-full h-full top-[100%]  left-[-100%] rounded-full group-hover:top-0   group-hover:left-0  duration-500 ease-in-out bg-[#455CE9] -z-10">
+
+</div>
+         </div>
+        
         </motion.div>
     </div>
     
