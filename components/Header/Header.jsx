@@ -52,7 +52,7 @@ const Header = () => {
   }, [top]);
   return (
     <>
-<div className="absolute text-white px-16 left-0 w-full flex justify-between items-center p-4 z-10 ">
+<div className="absolute text-white px-4 sm:16 left-0 w-full flex justify-between items-center p-4 z-10 ">
 <div  className="flex items-center justify-center group p-4">
 <div className="flex items-center justify-center pr-1 group-hover:rotate-360 cursor-pointer duration-500 ">
   <FaRegCopyright size={15}/>
