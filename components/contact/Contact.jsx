@@ -20,7 +20,7 @@ const Contact = () => {
 <Title_sections title ="Contact" color="white"/>
 
 
-<div className="flex flex-col lg:grid grid-cols-2 gap-16">
+<div className="flex flex-col items-center justify-center lg:grid grid-cols-2 gap-16">
         <motion.div
         initial={{x:-100}}
         viewport={{once:'true'}}
@@ -63,7 +63,7 @@ const Contact = () => {
          viewport={{once:'true'}}
          transition= { {duration: 1, ease: [0.32, 0, 0.67, 0],delay:0.2} }
         className='overflow-hidden relative w-full h-[700px] lg:h-full lg:min-h-[400px]  text-white bg-[#292929] p-8 rounded-lg flex flex-col justify-center gap-y-14  items-center'>
-         <h1 className='text-4xl font-semibold mb-12'>Let’s work together </h1>
+         <h1 className='text-3xl sm:text-4xl font-semibold mb-12'>Let’s work together </h1>
          
          <div className=' flex gap-10 sm:gap-16 font-semibold'>
          <Link href="https://m.facebook.com/kitil.seller.of.zatlah"><BsFacebook size={40}/></Link>
