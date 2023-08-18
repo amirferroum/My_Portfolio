@@ -11,6 +11,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Skills from "@/components/skills/Skills";
 import Test from "@/components/Test";
 import Contact from "@/components/contact/Contact";
+import Aymen from "@/components/Aymen";
 
 const slideUp = {
   initial: {
@@ -55,7 +56,7 @@ export default function Home() {
       
       <Contact />
       <Test />
-    
+       
     </div>
   );
 }

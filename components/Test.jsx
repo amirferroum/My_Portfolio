@@ -1,13 +1,35 @@
 import * as React from "react";
 import { useMouse } from "@uidotdev/usehooks";
-import { useInView,motion } from "framer-motion";
+import { useInView,motion,useAnimate,usePresence,stagger } from "framer-motion";
+import MagneticButton from "@/components/MagneticButton"
+import { useEffect } from "react";
+
+
+
+
+
+
+
+
+
 const Test = () => {
+
+
+
+
+
+
+
   const [mouse, ref] = useMouse();
 
   const xIntersecting = mouse.elementX > 0 && mouse.elementX < 300;
   const yIntersecting = mouse.elementY > 0 && mouse.elementY < 300;
   const isIntersecting = xIntersecting && yIntersecting;
-
+  const btnArr = [
+    {id: 1,text: "Hover Me"},
+    {id: 2,text: "I am Magnetic"},
+    {id: 3,text: "Read More"},
+    ]
   return (
     <section className="relative pointer-events-none">
       <h1>useMouse</h1>
@@ -32,6 +54,20 @@ animate={{
 className="absolute w-10 h-10 bg-black top-0 rounded-full opacity-40 " >
 
 </motion.div>
+<div className="App">
+{btnArr.map((item) => (
+<MagneticButton key={item.id} item={item} />
+))}
+</div>
+
+
+
+
+
+
+
+ 
+
     </section>
   );
 }

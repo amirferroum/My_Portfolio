@@ -132,8 +132,7 @@ const Skills = () => {
 
 
     </div>
-    <Curve color="#292929"/>
-    </div>
+     </div>
   )
 }
 
