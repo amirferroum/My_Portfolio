@@ -43,7 +43,7 @@ export default function Page() {
               <Project
                 color={project.color}
                 index={index}
-                src={project.src}
+                src={project.images[0]}
                 title={project.title}
                 sidetext={project.sidetext}
                 setModal={setModal}  // Pass setModal here if Project uses it

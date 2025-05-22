@@ -23,7 +23,7 @@ const Gallery = () => {
             color={project.color}
             index={index}
             // Pass only first pic src to Project
-            src={Array.isArray(project.src) ? project.src[0] : project.src}
+            src={Array.isArray(project.images) ? project.images[0] : project.images}
             title={project.title}
             sidetext={project.sidetext}
             setModal={setmodal}
