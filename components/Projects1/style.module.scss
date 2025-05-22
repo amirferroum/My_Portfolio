@@ -1,0 +1,116 @@
+.projects {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-top: 150px;
+
+  @media (min-width: 768px) {
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-top: 200px;
+  }
+
+  @media (min-width: 1024px) {
+    padding-left: 200px;
+    padding-right: 200px;
+    margin-top: 300px;
+  }
+
+  .body {
+    max-width: 1400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
+  }
+
+  .modalContainer {
+    height: 250px;
+    width: 90vw;
+    max-width: 400px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background-color: white;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 3;
+    transform: translate(-50%, -50%);
+
+    @media (min-width: 768px) {
+      height: 300px;
+    }
+
+    @media (min-width: 1024px) {
+      height: 350px;
+      width: 400px;
+    }
+  }
+
+  .modalSlider {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: top 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+  }
+
+  .modal {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .modal img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .cursor,
+  .cursorLabel {
+    display: none;
+
+    @media (min-width: 1024px) {
+      display: flex;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background-color: #455ce9;
+      color: white;
+      position: fixed;
+      z-index: 3;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 300;
+      pointer-events: none;
+    }
+  }
+
+  .cursorLabel {
+    background-color: transparent;
+  }
+}
+.curveTransition {
+  height: 300px;
+  background-color: white;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.curveCircle {
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background-color: black; // or white if the background after it is white
+  transform-origin: center;
+}

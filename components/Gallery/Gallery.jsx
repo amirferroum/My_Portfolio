@@ -5,6 +5,8 @@ import Modal from "./Modal";
 import Test from "../Test";
 import Title_sections from "../Title_sections";
 import { motion } from "framer-motion";
+import Magnetic from "@/common/Magnetic"
+
 const Gallery = () => {
   const projects = [
     {
@@ -56,9 +58,10 @@ const [modal, setmodal] = useState({active: false,index: 0});
 
     
 
-   
-    <div className="w-full flex justify-center p-4">
+    <Magnetic>
+                 <div className="w-full flex justify-center p-4">
   
+
       <div className="group relative overflow-hidden z-1 px-8 sm:px-16 py-4 sm:py-6 rounded-full text-lg sm:text-xl cursor-pointer border mt-9">
 <h1 className="z-10 group-hover:text-white delay-200">More Work</h1>
 
@@ -71,6 +74,8 @@ className="absolute w-full h-full top-[100%]   left-[-100%] rounded-full group-h
       </div>
       
     </div>
+                           </Magnetic>
+   
   
    
     

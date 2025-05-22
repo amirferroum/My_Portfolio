@@ -10,9 +10,10 @@ import Preloader from "@/components/Preloader/Preloader";
 import { AnimatePresence, motion } from "framer-motion";
 import Skills from "@/components/skills/Skills";
 import Test from "@/components/Test";
-import Contact from "@/components/contact/Contact";
 import Aymen from "@/components/Aymen";
-
+import Contact from "@/components/Contact"
+import SlidingImages from '../components/SlidingImages';
+import Description from "@/components/Description"
 const slideUp = {
   initial: {
       top: "+100vh"
@@ -52,10 +53,11 @@ export default function Home() {
       <Header />
       <Main />
       <Gallery />
-      <Skills />
-      
+      <Description />
+            <SlidingImages />
+
       <Contact />
-      <Test />
+     
        
     </div>
   );

@@ -12,9 +12,9 @@ const main = () => {
   return (
    <div className='w-full h-screen'>
      <div className="relative w-full h-screen bg-fixed bg-landing bg-cover object-cover z-1 ">
-     <div class="relative top-[60%]  sm:top-[50%] flex overflow-x-hidden">
-  <div class="py-12 animate-wiggle whitespace-nowrap">
-    <span class="text-6xl sm:text-9xl sm:text-[200px]  text-white font-semibold text-w mx-4">Amir-ferroum--Frelance--Amir-ferroum--Developer--Amir-ferroum--Amir-ferroum--</span>
+     <div className="relative top-[60%]  sm:top-[50%] flex overflow-x-hidden">
+  <div className="py-12 animate-wiggle whitespace-nowrap">
+    <span className="text-6xl sm:text-9xl sm:text-[200px]  text-white font-semibold text-w mx-4">Amir-ferroum--Frelance--Amir-ferroum--Developer--Amir-ferroum--Amir-ferroum--</span>
    
   </div>
 
