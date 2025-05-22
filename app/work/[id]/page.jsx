@@ -23,12 +23,12 @@ export async function generateStaticParams() {
 export default function ProjectDetail({ params }) {
   const { id } = params;
   const container = useRef(null);
-const { scrollYProgress } = useScroll({
-        target: container,
-        offset: ["start end", "end end"]
-    })
-    const x = useTransform(scrollYProgress, [0, 1], [0, 100])
-    const y = useTransform(scrollYProgress, [0, 1], [-500, 0])
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ["start end", "end end"]
+  });
+  const x = useTransform(scrollYProgress, [0, 1], [0, 100]);
+  const y = useTransform(scrollYProgress, [0, 1], [-500, 0]);
   const projectIndex = parseInt(id, 10);
   const project = projects[projectIndex];
 
@@ -48,30 +48,35 @@ const { scrollYProgress } = useScroll({
       </div>
 
       {/* Project details */}
-      <div className="px-8 md:px-48  pb-6">
-    <div className="px-8 md:px-48 pt-32 pb-12">
-  <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-    <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#334BD3] text-center md:text-left">
-      {project.title}
-    </h1>
-   <motion.div style={{ x }} className="w-fit">
-  <a
-    href={project.link}
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <Rounded backgroundColor={"#334BD3"}>
-      <p>Live Site</p>
-    </Rounded>
-  </a>
-</motion.div>
-  </div>
-</div>
-       
+      <div className="px-8 md:px-48 pb-6">
+        <div className="px-8 md:px-48 pt-32 pb-12">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#334BD3] text-center md:text-left">
+              {project.title}
+            </h1>
+
+            <motion.div style={{ x }} className="w-fit">
+              {project.link ? (
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Rounded backgroundColor={"#334BD3"}>
+                    <p>Live Site</p>
+                  </Rounded>
+                </a>
+              ) : (
+                <Rounded backgroundColor={"#999"} className="cursor-not-allowed opacity-50">
+                  <p>No Live Link</p>
+                </Rounded>
+              )}
+            </motion.div>
+          </div>
+        </div>
 
         {/* MacBook frame with project image inside screen */}
         <div className="relative w-full max-w-[800px] mx-auto mb-12">
-          {/* Image inside MacBook screen */}
           <div
             className="absolute top-[28%] left-[16.5%] w-[67%] h-[42%] overflow-hidden z-30"
             style={{ backgroundColor: '#f0f0f0' }}
@@ -109,41 +114,41 @@ const { scrollYProgress } = useScroll({
         </div>
 
         {/* Project description */}
-        <p className="text-lg font-semibold text-center leading-10 pb-40">{project.description}</p>
+        <p className="text-lg font-semibold text-center leading-10 pb-40">
+          {project.description}
+        </p>
       </div>
 
-      {/* Phone images with stair animation */}
+      {/* Phone images */}
       {project.phoneImages?.length > 0 && (
-  <div className="px-8 md:px-48 py-40 bg-[#1C1D20]">
-    <div className="relative" ref={container}>
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-        {project.phoneImages.map((img, idx) => {
-          const { scrollY } = useScroll();
-          // Create wave motion with sine pattern
-          const offsetY = useTransform(scrollY, value => 
-            Math.sin(value / 300 + idx) * 40 // Adjust 40 for amplitude, 300 for wave speed
-          );
+        <div className="px-8 md:px-48 py-40 bg-[#1C1D20]">
+          <div className="relative" ref={container}>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+              {project.phoneImages.map((img, idx) => {
+                const { scrollY } = useScroll();
+                const offsetY = useTransform(scrollY, value =>
+                  Math.sin(value / 300 + idx) * 40
+                );
 
-          return (
-            <motion.div
-              key={idx}
-              style={{ y: offsetY }}
-              className="relative w-full h-[800px]  rounded-xl overflow-hidden shadow-lg"
-            >
-              <Image
-                src={`/assets/${img}`}
-                alt={`Phone view ${idx + 1}`}
-                fill
-                className="object-cover"
-              />
-            </motion.div>
-          );
-        })}
-      </div>
-    </div>
-  </div>
-)}
-
+                return (
+                  <motion.div
+                    key={idx}
+                    style={{ y: offsetY }}
+                    className="relative w-full h-[800px] rounded-xl overflow-hidden shadow-lg"
+                  >
+                    <Image
+                      src={`/assets/${img}`}
+                      alt={`Phone view ${idx + 1}`}
+                      fill
+                      className="object-cover"
+                    />
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Contact Footer */}
       <footer

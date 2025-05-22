@@ -63,7 +63,7 @@ const Modal = ({ modal, projects }) => {
         className="absolute h-full w-full transition-all duration-700"
       >
         {projects.map((project, idx) => {
-          const { src, color } = project;
+          const { images, color } = project;
           return (
             <div
               key={`modal_${idx}`}
@@ -71,7 +71,7 @@ const Modal = ({ modal, projects }) => {
               className="relative h-full w-full flex justify-center items-center"
             >
               <Image
-                src={`/assets/${src}`}
+                src={`/assets/${images[0]}`}
                 width={200}
                 height={0}
                 className="h-auto"

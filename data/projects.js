@@ -11,21 +11,40 @@ link: "https://amirferroum.github.io/Aymen/"
 
   },
   {
-    title: "Manail",
-    images: ["officestudio.png", "officestudio-2.png"],
+    title: "Manazil",
+    images: ["manazil-1.png", "manazil-2.png","manazil-3.png","manazil-4.png"],
     color: "#8C8C8C",
     sidetext: "Development",
-    description:"",
+    description:"Manazil is a modern, user-friendly real estate platform designed to simplify the process of buying, selling, and renting properties. Whether you're searching for your dream home, looking to invest, or aiming to rent a perfect space, Manazil offers a comprehensive, reliable, and transparent marketplace tailored to your needs.",
+    phoneImages: ["manzail-phone-1.png","manazil-phone-2.png","manazil-phone-3.png"],
+  },
+    {
+    title: "Manazil Admin",
+    images: ["manazil-admin-1.png", "manazil-admin-2.png","manazil-admin-3.png","manazil-admin-4.png","manazil-admin-5.png","manazil-admin-6.png",],
+    color: "#8C8C8C",
+    sidetext: "Development",
+    description:"The Manazil Admin Dashboard is a centralized control panel designed to empower real estate managers and administrators with comprehensive tools to oversee and optimize the platform’s operations. It offers a seamless and intuitive interface to monitor listings, manage users, track transactions, and analyze performance metrics—all in real-time.",
+    
   },
   {
-    title: "Khademni",
-    images: ["locomotive-1.png", "locomotive-2.png", "locomotive-3.png"],
+    title: "Khedemni",
+    images: ["khedmni-1.png", "khedmni-2.png", "khedmni-3.png", "khedmni-4.png", "khedmni-5.png", "khedmni-6.png", "khedmni-7.png"],
     color: "#EFE8D3",
     sidetext: "Design & Development",
-    description:""
+    description:"Khedemni is an innovative web application designed to revolutionize the job market by intelligently matching job offers with the right candidates. Leveraging cutting-edge deep learning technologies, Khedemni simplifies the recruitment process for both employers and job seekers by delivering highly accurate and personalized job recommendations.",
+    
+
   },
   {
-    title: "Silencio",
+    title: "NBeauty",
+    images: ["nbeauty-1.png", "nbeauty-2.png", "nbeauty-3.png", "nbeauty-4.png"],
+    color: "#706D63",
+    sidetext: "Design & Development",
+    description:"NBeauty is the official online portfolio of a dedicated beauty business, showcasing a wide range of professional services designed to make you look and feel your best. From expert hair styling to rejuvenating skincare treatments, Nbeaty presents everything you need to know about the services offered — all in one elegant place.",
+    link: "https://nbeauty.vercel.app"
+  },
+  {
+    title: "Silencio1",
     images: ["silencio-1.png", "silencio-2.png"],
     color: "#706D63",
     sidetext: "Design & Development",

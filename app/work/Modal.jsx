@@ -61,7 +61,7 @@ const Modal = ({ modal, projects }) => {
         className={`absolute h-full w-full ease-sp duration-700`}
       >
         {projects.map((project, index) => {
-          const { src, color } = project;
+          const { images, color } = project;
 
           return (
             <div
@@ -71,7 +71,7 @@ const Modal = ({ modal, projects }) => {
             >
               <Image
                 className="h-auto"
-                src={`/assets/${src}`}
+                src={`/assets/${images[0]}`}
                 width={200}
                 height={0}
                 alt="image"
