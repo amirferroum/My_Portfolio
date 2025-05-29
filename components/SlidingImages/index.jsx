@@ -50,6 +50,7 @@ const slider2 = [
   { icon: <SiGithub color="#181717" /> },
   { icon: <SiGraphql color="#E10098" /> },
   { icon: <SiPython color="#3776AB" /> }
+  
 ]
 
 export default function TechSlider() {
